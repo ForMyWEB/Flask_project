@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>META Blog</title>
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/output.css') }}" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/9e3bcbb946.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="mx-auto bg-neutral-900 ">
+    <header>
+      <div class="flex flex-row md:justify-between items-center p-5 max-h-[63px] sticky top-1">
+        <div class="men md:hidden inline-grid sm:w-[13%] sm:justify-items-start">
+          <a href="">
+            <i class="fa-solid fa-bars text-white md:hidden sm: sm:text-xl sm:w-10"></i>
+          </a>
+        </div>
+        
+        <div class="logo sm:w-9/12 md:w-auto sm:justify-items-center sm:inline-grid">
+          <img src="{{ url_for('static', filename='img/logo-reverse.svg') }}" alt="Logo">
+        </div>
+        <div class="basic-1/3 info sm:hidden md:block">
+          <nav class="flex ">
+            <ul class="flex justify-center gap-7 p-3 text-lg">
+              <li><a class="hover:text-blue-400 font-mono text-sm text-white" href="#">Culture</a></li>
+              <li><a class="hover:text-blue-400 font-mono text-sm text-white" href="#">Politics</a></li>
+              <li><a class="hover:text-blue-400 font-mono text-sm text-white" href="#">Business</a></li>
+              <li><a class="hover:text-blue-400 font-mono text-sm text-white" href="#">The Big Idea</a></li>
+              <li><a class="hover:text-blue-400 font-mono text-sm text-white" href="/create">Your News</a></li>
+              <li><a class="hover:text-blue-400 font-mono text-sm text-white" href="#">Security</a></li>
+              <li><a class="hover:text-blue-400 font-mono text-sm text-white" href="#">Merch</a></li>
+            </ul>
+          </nav> 
+        </div>
+        <div class="md:flex  p-3 text-lg gap-3 login sm:hidden">
+          <button><a href="/register" class=" hover:text-blue-400 font-mono text-sm text-white">Sign-In</a></button>
+          <i class="fa-solid fa-magnifying-glass p-3 text-white"></i>
+        </div>
+      </div>
+      <hr class="h-0.5 w-auto mb-10 border-t-0 bg-gray-600  md:block" />
+    </header>
+
+    <main class="mx-auto sm:block sm:mx-auto">
+      <h1 class="text-5xl font-bold text-center md:mb-20 text-white">Blogs</h1>
+      <div class="md:flex md:w-auto sm:block">
+        <div class="md:blogs md:w-4/5 p-5 sm:w-auto sm:mx-auto">
+          <div class="flex flex-col">
+            <div class="item flex gap-5 p-10">
+              <div class="icon md:w-1/4 flex  sm:w-60 rounded">
+                <img src="{{ url_for('static', filename='img/item-2.png') }}" alt="icon">
+              </div>
+              <div class="near-icon-info w-3/4 sm:mx-auto">
+                <span class="theme font-mono text-gray-400">Business</span>
+                <a href="#" class="font-bold hover:underline text-white"><h2>Molly White Tracks Crypto Scams. It's Going Just Great</h2></a>
+                <p class="author text-gray-400 font-thin">By Joel Khalili</p>
+              </div>
+            </div>
+            <hr class="h-0.5 w-auto border-t-0 bg-gray-600 sm:block md:hidden" />
+
+            <div class="item flex gap-5 p-10">
+              <div class="icon md:w-1/4 sm:w-60 flex rounded">
+                <img src="{{ url_for('static', filename='img/item-1.png') }}" alt="icon">
+              </div>
+              <div class="near-icon-info w-3/4 sm:w-auto">
+                <span class="theme font-mono text-gray-400 sm:w-auto">Gear</span>
+                <a href="#" class="font-bold hover:underline text-white"><h2>Google Search Ranks AI Spam Above Original Reporting in News Results</h2></a>
+                <p class="author text-gray-400 font-thin">By Reece Rogers</p>
+              </div>
+            </div>
+            <hr class="h-0.5 w-auto border-t-0 bg-gray-600 sm:block md:hidden" />
+
+            <div class="item flex gap-5 p-10">
+              <div class="icon md:w-1/4 sm:w-60 flex rounded">
+                <img src="{{ url_for('static', filename='img/item-3.png') }}" alt="icon">
+              </div>
+              <div class="near-icon-info w-3/4">
+                <span class="theme font-mono text-gray-400">Business</span>
+                <a href="#" class="font-bold hover:underline text-white"><h2>Wagner Mutiny Puts Russia’s Military Bloggers on a Razor’s Edge</h2></a>
+                <p class="author text-gray-400 font-thin">By Morgan Meaker</p>
+              </div>
+            </div>
+            <hr class="h-0.5 w-auto border-t-0 bg-gray-600 sm:block md:hidden" />
+
+          </div>
+        </div>
+
+        <div class="popular w-1/4 mb-9 sm:hidden md:block">
+          <div class="most">
+            <hr class="h-0.5 w-full border-t-0 bg-gray-500" />
+            <h3 class="uppercase text-sm font-mono font-bold p-4 pl-10 text-white">Most Popular</h3>
+            <hr class="h-0.5 w-full border-t-0 bg-gray-500" />
+          </div>
+
+          <div class="item flex gap-5 p-10">
+            <div class="icon w-1/4 flex">
+              <img src="{{ url_for('static', filename='img/item-3.png') }}" alt="icon">
+            </div>
+            <div class="near-icon-info w-3/4">
+              <span class="theme font-mono text-gray-400">Business</span>
+              <a href="#" class="font-bold hover:underline text-white"><h2>Wagner Mutiny Puts Russia’s Military Bloggers on a Razor’s Edge</h2></a>
+              <p class="author text-gray-400 font-thin">By Morgan Meaker</p>
+            </div>
+          </div>
+
+          <div class="item flex gap-5 p-10">
+            <div class="icon w-1/4 flex">
+              <img src="{{ url_for('static', filename='img/ios.png') }}" alt="icon">
+            </div>
+            <div class="near-icon-info w-3/4">
+              <span class="theme font-mono text-gray-400">Gear</span>
+              <a href="#" class="font-bold hover:underline text-white"><h2>The Top New Features Coming to Apple’s iOS 18 and iPadOS 18</h2></a>
+              <p class="author text-gray-400 font-thin">By Julian Chokkattu</p>
+            </div>
+          </div>
+
+          <div class="item flex gap-5 p-10">
+            <div class="icon w-1/4 flex">
+              <img src="{{ url_for('static', filename='img/Item-4.png') }}" alt="icon">
+            </div>
+            <div class="near-icon-info w-3/4">
+              <span class="theme font-mono text-gray-400">Security</span>
+              <a href="#" class="font-bold hover:underline text-white"><h2>What You Need to Know About Grok AI and Your Privacy</h2></a>
+              <p class="author text-gray-400 font-thin">By Kate O`Flaherty</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-black md:px-60 md:py-20 sm:mx-auto sm:w-auto">
+      <div class="text-center md:grid md:justify-items-center mb-10 sm:grid ">
+        <img class="sm:w-[200px] sm:h-[80px] justify-self-center pb-5 sm:pt-5" src="{{ url_for('static', filename='img/logo-reverse.svg') }}" alt="Logo">
+        <p class="text-white md:w-1/2 sm:justify-self-center sm:w-[380px]">WIRED is where tomorrow is realized. It is the essential source of information and ideas that make sense of a world in constant transformation. The WIRED conversation illuminates how technology is changing every aspect of our lives—from culture to business, science to design. The breakthroughs and innovations that we uncover lead to new ways of thinking, new connections, and new industries.</p>
+      </div>
+      <hr class="h-0.5 w-auto mb-10 border-t-0 bg-gray-600 sm:block md:hidden" />
+      <div class="flex gap-10 justify-center sm:pb-5">
+        <div class="abt-gr">
+          <h4 class="text-gray-500 pb-5">Contact Us</h4>
+          <span class="text-white p-1">+380976360588</span>
+          <a href="mailto:test@gmail.com"><p class="text-white p-1">Email Us</p></a>
+          <span class="text-white p-1">Mon-Fri 9am-3pm PT</span>
+        </div>
+        <div class="abt-gr">
+          <h4 class="text-gray-500 pb-5">Customers</h4>
+          <a href="#"><span class="text-white p-1">FAQ</span></a>
+          <a href="#"><p class="text-white p-1">Careers</p></a>
+          <a href="#"><span class="text-white p-1">Do Not Sell My Info</span></a>
+        </div>
+        <div class="abt-gr">
+          <h4 class="text-gray-500 pb-5">Company</h4>
+          <a href="#"><span class="text-white p-1">About Us</span></a>
+          <a href="#"><p class="text-white p-1">Terms</p></a>
+          <a href="#"><span class="text-white p-1">Privacy Policy</span></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+<script src="{{ url_for('static', filename='js/main.js') }}" defer></script>  
+</body>
+</html>

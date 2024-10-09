@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an account or sign-in </title>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/output.css') }}" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/9e3bcbb946.js" crossorigin="anonymous"></script>
+</head>
+<body>
+ 
+    <div class="wrapper bg-neutral-800 text-white mx-auto flex">
+        <div class="cont w-1/2">
+            <div class="icon">
+                <img src="{{ url_for('static', filename='img/WIRED-Image.png') }}" class="md:block sm:hidden" alt="page">
+            </div>
+        </div>
+            <div class="register w-2/4 p-32">
+
+                <img class="pb-5" src="{{ url_for('static',filename='img/logo-reverse.svg') }}" alt="">
+                <h1 class="pb-5 font-bold text-3xl">
+                    Sign in or create an account
+                </h1>
+
+                <label class="block mb-1" for="email">Email<span class="required">*</span></label>
+                <input class="bg-neutral-900 border-solid border-2 rounded border-neutral-600 w-full p-2.5 m-2.5" type="text" id="email" name="email" required>
+        
+                <label class="block mb-1" for="lastName">Password<span class="required">*</span></label>
+                <input class="bg-neutral-900 border-solid border-2 rounded border-neutral-600 w-full p-2.5 m-2.5" type="password" id="password" name="password" required>
+
+                <button class=" m-2.5 w-full border-2 rounded p-2.5 border-none bg-neutral-600 hover:bg-neutral-700 cursor-pointer" type="submit">Send</button>
+
+            </div>
+    </div>
+
+<script src="{{ url_for('static', filename='js/main.js') }}" defer></script>  
+</body>
+</html>
